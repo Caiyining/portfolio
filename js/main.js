@@ -121,7 +121,7 @@ window.onload = () => {
   const sceneB = new ScrollMagic.Scene({
     triggerElement: "#section2",
     tweenChanges: true,
-    duration: window.innerHeight *8,
+    duration: window.innerHeight *4,
     offset: window.innerHeight / 2,
   })
     .setPin("#section2") // pins the element for the the scene's duration
@@ -149,7 +149,7 @@ window.onload = () => {
     //   allEgg[index].src = "./pic/egg2.png";
     // }
 
-    const index = Math.floor(mapping(p,0,1,1,22))
+    const index = Math.floor(mapping(p,0,1,1,21))
     
 
     egg.src = `./pic/egg${index}.png`
@@ -186,10 +186,10 @@ window.onload = () => {
 
     plants.forEach((plant,i)=>{
 
-      gsap.to(plant,{y:-p*350-340,delay:i/15})
+      gsap.to(plant,{y:-p*200-340,delay:i/15})
       
     })
-    gsap.to(".font3",{y: p * -500, duration: 1})
+    gsap.to(".font3",{y: p * -350, duration: 1})
 
   });
 
@@ -197,7 +197,7 @@ window.onload = () => {
   const sceneD = new ScrollMagic.Scene({
     triggerElement: "#section4",
     tweenChanges: true,
-    duration: window.innerHeight * 10,
+    duration: window.innerHeight * 8,
     offset: window.innerHeight / 2,
   })
     .setPin("#section4") // pins the element for the the scene's duration
@@ -208,7 +208,7 @@ window.onload = () => {
 
   sceneD.on("progress", (e) => {
     const p = e.progress;
-    gsap.to('#bgBox',{x:p*2000-1000})
+    gsap.to('#bgBox',{x:p*2000-900})
     // gsap.to('#intro',{x:p*1000})
     
     // if(p > 0.8){
